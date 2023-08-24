@@ -214,9 +214,9 @@
 
     <div class="content">
       <h2 style="text-align: center;">Samples for atomic editing operations</h2>
-      <div style="text-align: justify;">
+      <!-- <div style="text-align: justify;">
       Input is command text and source music, output is edited music
-    </div>
+    </div> -->
       
     <div style="margin-top: 4vh; text-align: center;">
       <h3>Atomic operations - Add</h3>
@@ -351,7 +351,7 @@
       <h2 style="text-align: center;">Samples for remix operations</h2>
 
       <div style="margin-top: 4vh; text-align: center;">
-      <h3>Remix with instruments</h3>
+      <h3>Remix</h3>
       <div class="table-responsive pt-3">
         <ul class="pagination justify-content-center">
           <li class="page-item active">
@@ -422,8 +422,247 @@
       </div>
       </div>
 
+      <div style="margin-top: 4vh; text-align: center;">
+      <h3>Remix and guided to soft mood</h3>
+      <div class="table-responsive pt-3">
+        <ul class="pagination justify-content-center">
+          <li class="page-item active">
+            <a id="soft-operation-1" class="page-link" href="#">1</a>
+          </li>
+        </ul>
+        <table
+          class="table pt-2"
+          id="soft-operation"
+        >
+          <thead>
+            <tr>
+              <th>Text Prompt</th>
+              <th style="text-align: center">Source-acc</th>
+              <th style="text-align: center">Source-melody</th>
+              <th style="text-align: center">Target-acc</th>
+              <th style="text-align: center">Target-melody</th>
+              <th style="text-align: center">InstructME-acc</th>
+              <th style="text-align: center">InstructME-melody</th>
+              <th style="text-align: center">AUDIT-acc</th>
+              <th style="text-align: center">AUDIT-melody</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      </div>
+
+      <div style="margin-top: 4vh; text-align: center;">
+      <h3>Remix and guided to happy mood</h3>
+      <div class="table-responsive pt-3">
+        <ul class="pagination justify-content-center">
+          <li class="page-item active">
+            <a id="happy-operation-1" class="page-link" href="#">1</a>
+          </li>
+        </ul>
+        <table
+          class="table pt-2"
+          id="happy-operation"
+        >
+          <thead>
+            <tr>
+              <th>Text Prompt</th>
+              <th style="text-align: center">Source-acc</th>
+              <th style="text-align: center">Source-melody</th>
+              <th style="text-align: center">Target-acc</th>
+              <th style="text-align: center">Target-melody</th>
+              <th style="text-align: center">InstructME-acc</th>
+              <th style="text-align: center">InstructME-melody</th>
+              <th style="text-align: center">AUDIT-acc</th>
+              <th style="text-align: center">AUDIT-melody</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      </div>
 
     </div> 
+
+    <div class="content">
+      <h2 style="text-align: center;">Diversity and Stability</h2>
+      <!-- <div style="text-align: justify;">
+      Input is command text and source music, output is edited music
+    </div> -->
+    <div style="margin-top: 4vh; text-align: center;">
+      <h3>Diversity in atomic editing tasks</h3>
+      <div class="table-responsive pt-3">
+        <ul class="pagination justify-content-center">
+          <li class="page-item active">
+            <a id="dedit-operation-1" class="page-link" href="#">1</a>
+          </li>
+          <li class="page-item">
+            <a id="dedit-operation-2" class="page-link" href="#">2</a>
+          </li>
+        </ul>
+        <table
+          class="table pt-2"
+          id="dedit-operation"
+        >
+          <thead>
+            <tr>
+              <th>Text Prompt</th>
+              <th style="text-align: center">Source</th>
+              <th style="text-align: center">Target</th>
+              <th style="text-align: center">InstructME-1</th>
+              <th style="text-align: center">InstructME-2</th>
+              <th style="text-align: center">InstructME-3</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      </div>
+
+      <div style="margin-top: 4vh; text-align: center;">
+      <h3>Diversity in remix tasks</h3>
+      <div class="table-responsive pt-3">
+        <ul class="pagination justify-content-center">
+          <li class="page-item active">
+            <a id="dremix-operation-1" class="page-link" href="#">1</a>
+          </li>
+          <li class="page-item">
+            <a id="dremix-operation-2" class="page-link" href="#">2</a>
+          </li>
+        </ul>
+        <table
+          class="table pt-2"
+          id="dremix-operation"
+        >
+          <thead>
+            <tr>
+              <th>Text Prompt</th>
+              <th style="text-align: center">Source-acc</th>
+              <th style="text-align: center">Source-melody</th>
+              <th style="text-align: center">Target-acc</th>
+              <th style="text-align: center">Target-melody</th>
+              <th style="text-align: center">InstructME-acc-1</th>
+              <th style="text-align: center">InstructME-melody-1</th>
+              <th style="text-align: center">InstructME-acc-2</th>
+              <th style="text-align: center">InstructME-melody-2</th>
+              <th style="text-align: center">InstructME-acc-3</th>
+              <th style="text-align: center">InstructME-melody-3</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      </div>
+
+      <div style="margin-top: 4vh; text-align: center;">
+      <h3>Stability in atomic editing tasks</h3>
+      <div class="table-responsive pt-3">
+        <ul class="pagination justify-content-center">
+          <li class="page-item active">
+            <a id="sedit-operation-1" class="page-link" href="#">1</a>
+          </li>
+          <li class="page-item">
+            <a id="sedit-operation-2" class="page-link" href="#">2</a>
+          </li>
+        </ul>
+        <table
+          class="table pt-2"
+          id="sedit-operation"
+        >
+          <thead>
+            <tr>
+              <th>Text Prompt</th>
+              <th style="text-align: center">Source</th>
+              <th style="text-align: center">Target</th>
+              <th style="text-align: center">InstructME-1</th>
+              <th style="text-align: center">InstructME-2</th>
+              <th style="text-align: center">InstructME-3</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      </div>
+
+    </div> 
+
+    <div class="content">
+      <h2 style="text-align: center;">Multi-round Editing</h2>
+      <!-- <div style="text-align: justify;">
+      Input is command text and source music, output is edited music
+    </div> -->
+
+    <div style="margin-top: 4vh; text-align: center;">
+      <!-- <h3>Stability in atomic editing tasks</h3> -->
+      <div class="table-responsive pt-3">
+        <ul class="pagination justify-content-center">
+          <li class="page-item active">
+            <a id="multi-operation-1" class="page-link" href="#">1</a>
+          </li>
+          <!-- <li class="page-item">
+            <a id="sedit-operation-2" class="page-link" href="#">2</a>
+          </li> -->
+        </ul>
+        <table
+          class="table pt-2"
+          id="multi-operation"
+        >
+          <thead>
+            <tr>
+              <th>Method</th>
+              <td style="text-align: center">Source</td>
+              <td style="text-align: center">Command 1: Add acoustic guitar</td>
+              <td style="text-align: center">Command 2: Add drum kit</td>
+              <td style="text-align: center">Command 3: replace acoustic guitar with piano</td>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      </div>
+
+    </div> 
+    
+    <div class="content">
+      <h2 style="text-align: center;">Long Music Editing</h2>
+      <!-- <div style="text-align: justify;">
+      Input is command text and source music, output is edited music
+    </div> -->
+
+    <div style="margin-top: 4vh; text-align: center;">
+      <!-- <h3>Stability in atomic editing tasks</h3> -->
+      <div class="table-responsive pt-3">
+        <ul class="pagination justify-content-center">
+          <!-- <li class="page-item active">
+            <a id="long-operation-1" class="page-link" href="#">1</a>
+          </li> -->
+          <!-- <li class="page-item">
+            <a id="long-operation-2" class="page-link" href="#">2</a>
+          </li> -->
+<!--           <li class="page-item">
+            <a id="long-operation-3" class="page-link" href="#">2</a>
+          </li> -->
+        </ul>
+        <table
+          class="table pt-2"
+          id="long-operation"
+        >
+          <thead>
+            <tr>
+              <th>Text Prompt</th>
+              <th style="text-align: center">Source</th>
+              <th style="text-align: center">Duration</th>
+              <th style="text-align: center">InstructME</th>
+              <th style="text-align: center">AUDIT</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      </div>
+
+    </div>
+
 
   </body>
 
