@@ -211,6 +211,55 @@ function generateRemixTable(tableId, filenames, page) {
 }
 
 
+function generateRealTable(tableId, filenames, songnames, page) {
+  let numPerPage = 4;
+  let table = document.getElementById(tableId + '-operation');
+  let nrRows = table.rows.length;
+  for (let i = 1; i < nrRows; i++) {
+    table.deleteRow(1);
+  }
+  const prefix = 'music/edit_' + tableId + '/';
+  const end_idx = page * numPerPage;
+  for (let i = (page - 1) * numPerPage; i < end_idx; i++) {
+    let row = table.insertRow(i % numPerPage + 1);
+    row.style.height = '80px';
+    if (i < filenames.length) {
+      let cell = row.insertCell(0);
+      let reg = /[0-9]+/g;
+      let command = filenames[i].replace(reg,"");
+      cell.innerHTML = command.replaceAll('_', ' ');
+      cell.style.textAlign = "center";
+
+      cell = row.insertCell(1);
+      let title = songnames[i];
+      cell.innerHTML = title;
+      cell.style.textAlign = "center";
+
+      cell = row.insertCell(2);
+      cell.innerHTML = createAudioHTML(prefix + filenames[i] + '_source.wav', false);
+      cell.style.textAlign = "center";
+
+      cell = row.insertCell(3);
+      cell.innerHTML = createAudioHTML(prefix + filenames[i] + '_instructme.wav', false);
+      cell.style.textAlign = "center";
+
+    } else {
+      let cell = row.insertCell(0);
+      cell.innerHTML = '<br>';
+      cell = row.insertCell(1);
+      cell.innerHTML = '<br>';
+      cell.style.textAlign = "center";
+      cell = row.insertCell(2);
+      cell.innerHTML = '<br>';
+      cell.style.textAlign = "center";
+      cell = row.insertCell(3);
+      cell.innerHTML = '<br>';
+      cell.style.textAlign = "center";
+    }
+  }
+}
+
+
 function generateDiversityRemixTable(tableId, filenames, page) {
   let numPerPage = 4;
   let table = document.getElementById(tableId + '-operation');
@@ -457,15 +506,18 @@ remove = ['remove_drum_kit_109', 'remove_drum_kit_110', 'remove_bass_96', 'remov
 extract = ['extract_drum_kit_172', 'extract_drum_kit_166', 'extract_rhythm_acoustic_guitar_123', 'extract_bass_153', 'extract_electric_piano_136', 'extract_piano_141', 'extract_piano_142', 'extract_acoustic_guitar_126', 'extract_drum_kit_178', 'extract_rhythm_acoustic_guitar_128']
 replace = ['replace_rhythm_acoustic_guitar_with_drum_kit_202', 'replace_bass_with_piano_207', 'replace_bass_with_drum_kit_219', 'replace_bass_with_electric_guitar_236', 'replace_acoustic_guitar_with_drum_kit_189', 'replace_pedal_steel_guitar_with_bass_181', 'replace_pedal_steel_guitar_with_drum_kit_192', 'replace_bass_with_electric_guitar_227', 'replace_drum_kit_with_bass_239', 'replace_bass_with_electric_guitar_182']
 
-instr = ['remix_this_music_11', 'remix_this_music_20', 'remix_this_music_17', 'remix_this_music_2', 'remix_this_music_13', 'remix_this_music_12', 'remix_this_music_1', 'remix_this_music_10', 'remix_this_music_3', 'remix_this_music_18']
+instr = ['remix_with_guitar_drums_piano_synth_lead_20', 'remix_with_drums_guitar_bass_3', 'remix_with_drums_piano_12', 'remix_with_bass_drum_strings_1', 'remix_with_bass_guitar_drums_2', 'remix_with_guitar_strings_drums_bass_10', 'remix_with_piano_drums_strings_bass_guitar_11', 'remix_with_guitar_strings_synth_pad_bass_piano_13', 'remix_with_guitar_drums_bass_piano_strings_17', 'remix_with_bass_synth_lead_strings_piano_drums_18']
+//['remix_this_music_11', 'remix_this_music_20', 'remix_this_music_17', 'remix_this_music_2', 'remix_this_music_13', 'remix_this_music_12', 'remix_with_bass_drum_strings_1', 'remix_this_music_10', 'remix_this_music_3', 'remix_this_music_18']
 // ['remix_with_guitar_drums_piano_synth_lead_20', 'remix_with_drums_piano_guitar_bass_3', 'remix_with_drums_piano_12', 'remix_with_bass_piano_strings_1', 'remix_with_bass_guitar_drums_2', 'remix_with_guitar_piano_strings_drums_bass_10', 'remix_with_piano_drums_strings_bass_guitar_11', 'remix_with_guitar_strings_synth_pad_bass_piano_13', 'remix_with_guitar_drums_bass_piano_strings_17', 'remix_with_bass_synth_lead_strings_piano_drums_18']
 
 genre = ['remix_to_pop_genre_10', 'remix_to_blues_genre_5', 'remix_to_r_and_b_genre_14', 'remix_to_funk_genre_3', 'remix_to_soul_genre_6', 'remix_to_alternative_genre_2', 'remix_to_r_and_b_genre_12', 'remix_to_rock_genre_9', 'remix_to_disco_genre_15', 'remix_to_pop_genre_13']
 
-soft = ['remix_this_music_9', 'remix_this_music_23', 'remix_this_music_14']
+soft = ['remix_with_piano_drums_guitar_bass_14', 'remix_with_bass_piano_guitar_drums_9', 'remix_with_piano_drums_bass_guitar_23']
+// ['remix_this_music_9', 'remix_this_music_23', 'remix_this_music_14']
 // ['remix_with_piano_drums_guitar_bass_14', 'remix_with_bass_piano_guitar_drums_9', 'remix_with_piano_drums_bass_guitar_23']
 
-happy = ['remix_this_music_18', 'remix_this_music_53', 'remix_this_music_0']
+happy = ['remix_with_bass_drums_guitar_piano_53', 'remix_with_bass_0', 'remix_with_drums_bass_guitar_18']
+// ['remix_this_music_18', 'remix_this_music_53', 'remix_this_music_0']
 // ['remix_with_bass_drums_guitar_piano_53', 'remix_with_bass_0', 'remix_with_drums_bass_guitar_18']
 dedit = ['add_piano_16', 'add_acoustic_guitar_1', 'add_drum_kit_49', 'replace_bass_with_electric_guitar_236', 'replace_bass_with_drum_kit_219', 'replace_bass_with_piano_207']
 
@@ -476,6 +528,15 @@ sedit = ['remove_drum_kit_107', 'extract_piano_141', 'extract_rhythm_acoustic_gu
 multi = ['audit', 'instructme']
 
 long = ['add_rhythm_acoustic_guitar_1', 'add_rhythm_acoustic_guitar_1', 'extract_electric_guitar_8', 'extract_electric_guitar_8', 'add_bass_3', 'add_bass_3', 'add_electric_drum_kit_0', 'add_electric_drum_kit_0', 'remove_piano_6', 'remove_piano_6']
+
+real = ['add_rhythm_acoustic_guitar_0', 'add_string_sections_1', 'replace_acoustic_guitar_with_piano_2', 'replace_violin_with_piano_5', 'replace_piano_with_acoustic_guitar_6', 'remove_electric_guitar_71', 'extract_electric_guitar_7', 'remove_drum_kit_8', 'add_bass_9', 'add_electric_drum_kit_10']
+
+title = ['Lost Woods', 'Gugur Bunga', 'Zelda', "Twilight - Bella's Lullaby", 'Dolphin Dance', 'Fall Sounds', 'Fall Sounds', 'Amas Veritas', 'Aşk-ı Memnu Jenerik Müziği', "Eline Kleine Nachtmusik-Mov't 1-M'"]
+
+melody = ['add_bass_0', 'remove_drum_kit_1', 'replace_drum_kit_with_piano_2', 'remove_drum_kit_3']
+
+melody_t = ['菊花台', '麦浪', '月亮不曾奔我而来', 'Lover']
+
 generateEditTable('add', add  , 1);
 generateEditTable('remove', remove  , 1);
 generateEditTable('extract', extract  , 1);
@@ -488,6 +549,8 @@ generateRemixTable('happy', happy  , 1);
 generateDiversityTable('dedit', dedit  , 1);
 generateDiversityRemixTable('dremix', dremix  , 1);
 generateDiversityTable('sedit', sedit  , 1);
+generateRealTable('real', real, title, 1);
+generateRealTable('melody', melody, melody_t, 1);
 generateMultiTable('multi', multi  , 1);
 generateLongTable('long', long  , 1);
 
@@ -645,6 +708,21 @@ $(document).ready(function() {
     });
   }
 });
+
+$(document).ready(function() {
+  for (let i = 1; i <= 3; i++) {
+    let id = '#real-operation-' + i;
+    $(id).click(function() {
+      generateRealTable(
+          'real',
+          real, title, i);
+      $(id).parent().siblings().removeClass('active');
+      $(id).parent().addClass('active');
+      return false;
+    });
+  }
+});
+
 
 $(document).ready(function() {
   for (let i = 1; i <= 1; i++) {
