@@ -521,7 +521,7 @@ happy = ['remix_with_bass_drums_guitar_piano_53', 'remix_with_bass_0', 'remix_wi
 // ['remix_with_bass_drums_guitar_piano_53', 'remix_with_bass_0', 'remix_with_drums_bass_guitar_18']
 dedit = ['add_piano_16', 'add_acoustic_guitar_1', 'add_drum_kit_49', 'replace_bass_with_electric_guitar_236', 'replace_bass_with_drum_kit_219', 'replace_bass_with_piano_207']
 
-dremix = ['remix_to_pop_genre_25', 'remix_to_alternative_genre_2', 'remix_this_music_29', 'remix_this_music_12', 'remix_this_music_31', 'remix_to_pop_genre_10']
+dremix = ['remix_to_pop_genre_25', 'remix_to_alternative_genre_2', 'remix_with_drums_guitar_bass_29', 'remix_with_drums_piano_12', 'remix_with_bass_synth_lead_drums_31', 'remix_to_pop_genre_10']
 
 sedit = ['remove_drum_kit_107', 'extract_piano_141', 'extract_rhythm_acoustic_guitar_123', 'extract_drum_kit_166', 'remove_piano_76', 'remove_acoustic_guitar_62']
 
