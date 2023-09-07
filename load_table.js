@@ -34,15 +34,15 @@ function generateEditTable(tableId, filenames, page) {
       cell.style.textAlign = "center";
 
       cell = row.insertCell(2);
-      cell.innerHTML = createAudioHTML(prefix + filenames[i] + '_target.wav', false);
-      cell.style.textAlign = "center";
-
-      cell = row.insertCell(3);
       cell.innerHTML = createAudioHTML(prefix + filenames[i] + '_instructme.wav', false);
       cell.style.textAlign = "center";
 
-      cell = row.insertCell(4);
+      cell = row.insertCell(3);
       cell.innerHTML = createAudioHTML(prefix + filenames[i] + '_audit.wav', false);
+      cell.style.textAlign = "center";
+
+      cell = row.insertCell(4);
+      cell.innerHTML = createAudioHTML(prefix + filenames[i] + '_target.wav', false);
       cell.style.textAlign = "center";
     } else {
       let cell = row.insertCell(0);
@@ -87,19 +87,19 @@ function generateDiversityTable(tableId, filenames, page) {
       cell.style.textAlign = "center";
 
       cell = row.insertCell(2);
-      cell.innerHTML = createAudioHTML(prefix + filenames[i] + '_target.wav', false);
-      cell.style.textAlign = "center";
-
-      cell = row.insertCell(3);
       cell.innerHTML = createAudioHTML(prefix + filenames[i] + '_instructme1.wav', false);
       cell.style.textAlign = "center";
 
-      cell = row.insertCell(4);
+      cell = row.insertCell(3);
       cell.innerHTML = createAudioHTML(prefix + filenames[i] + '_instructme2.wav', false);
       cell.style.textAlign = "center";
 
-      cell = row.insertCell(5);
+      cell = row.insertCell(4);
       cell.innerHTML = createAudioHTML(prefix + filenames[i] + '_instructme3.wav', false);
+      cell.style.textAlign = "center";
+
+      cell = row.insertCell(5);
+      cell.innerHTML = createAudioHTML(prefix + filenames[i] + '_target.wav', false);
       cell.style.textAlign = "center";
     } else {
       let cell = row.insertCell(0);
@@ -158,27 +158,27 @@ function generateRemixTable(tableId, filenames, page) {
       cell.style.textAlign = "center";
 
       cell = row.insertCell(3);
-      cell.innerHTML = createAudioHTML(prefix + filenames[i] + '_target_acc.wav', false);
-      cell.style.textAlign = "center";
-
-      cell = row.insertCell(4);
-      cell.innerHTML = createAudioHTML(prefix + filenames[i] + '_target_melody.wav', false);
-      cell.style.textAlign = "center";
-
-      cell = row.insertCell(5);
       cell.innerHTML = createAudioHTML(prefix + filenames[i] + '_instructme_acc.wav', false);
       cell.style.textAlign = "center";
 
-      cell = row.insertCell(6);
+      cell = row.insertCell(4);
       cell.innerHTML = createAudioHTML(prefix + filenames[i] + '_instructme_melody.wav', false);
       cell.style.textAlign = "center";
 
-      cell = row.insertCell(7);
+      cell = row.insertCell(5);
       cell.innerHTML = createAudioHTML(prefix + filenames[i] + '_audit_acc.wav', false);
       cell.style.textAlign = "center";
 
-      cell = row.insertCell(8);
+      cell = row.insertCell(6);
       cell.innerHTML = createAudioHTML(prefix + filenames[i] + '_audit_melody.wav', false);
+      cell.style.textAlign = "center";
+
+      cell = row.insertCell(7);
+      cell.innerHTML = createAudioHTML(prefix + filenames[i] + '_target_acc.wav', false);
+      cell.style.textAlign = "center";
+
+      cell = row.insertCell(8);
+      cell.innerHTML = createAudioHTML(prefix + filenames[i] + '_target_melody.wav', false);
       cell.style.textAlign = "center";
 
     } else {
@@ -246,27 +246,27 @@ function generateRemixGuideTable(tableId, filenames, page) {
       cell.style.textAlign = "center";
 
       cell = row.insertCell(3);
-      cell.innerHTML = createAudioHTML(prefix + filenames[i] + '_target_acc.wav', false);
-      cell.style.textAlign = "center";
-
-      cell = row.insertCell(4);
-      cell.innerHTML = createAudioHTML(prefix + filenames[i] + '_target_melody.wav', false);
-      cell.style.textAlign = "center";
-
-      cell = row.insertCell(5);
       cell.innerHTML = createAudioHTML(prefix + filenames[i] + '_instructme_acc.wav', false);
       cell.style.textAlign = "center";
 
-      cell = row.insertCell(6);
+      cell = row.insertCell(4);
       cell.innerHTML = createAudioHTML(prefix + filenames[i] + '_instructme_melody.wav', false);
       cell.style.textAlign = "center";
 
-      cell = row.insertCell(7);
+      cell = row.insertCell(5);
       cell.innerHTML = createAudioHTML(prefix + filenames[i] + '_audit_acc.wav', false);
       cell.style.textAlign = "center";
 
-      cell = row.insertCell(8);
+      cell = row.insertCell(6);
       cell.innerHTML = createAudioHTML(prefix + filenames[i] + '_audit_melody.wav', false);
+      cell.style.textAlign = "center";
+
+      cell = row.insertCell(7);
+      cell.innerHTML = createAudioHTML(prefix + filenames[i] + '_target_acc.wav', false);
+      cell.style.textAlign = "center";
+
+      cell = row.insertCell(8);
+      cell.innerHTML = createAudioHTML(prefix + filenames[i] + '_target_melody.wav', false);
       cell.style.textAlign = "center";
 
     } else {
@@ -382,35 +382,35 @@ function generateDiversityRemixTable(tableId, filenames, page) {
       cell.style.textAlign = "center";
 
       cell = row.insertCell(3);
-      cell.innerHTML = createAudioHTML(prefix + filenames[i] + '_target_acc.wav', false);
-      cell.style.textAlign = "center";
-
-      cell = row.insertCell(4);
-      cell.innerHTML = createAudioHTML(prefix + filenames[i] + '_target_melody.wav', false);
-      cell.style.textAlign = "center";
-
-      cell = row.insertCell(5);
       cell.innerHTML = createAudioHTML(prefix + filenames[i] + '_instructme1_acc.wav', false);
       cell.style.textAlign = "center";
 
-      cell = row.insertCell(6);
+      cell = row.insertCell(4);
       cell.innerHTML = createAudioHTML(prefix + filenames[i] + '_instructme1_melody.wav', false);
       cell.style.textAlign = "center";
 
-      cell = row.insertCell(7);
+      cell = row.insertCell(5);
       cell.innerHTML = createAudioHTML(prefix + filenames[i] + '_instructme2_acc.wav', false);
       cell.style.textAlign = "center";
 
-      cell = row.insertCell(8);
+      cell = row.insertCell(6);
       cell.innerHTML = createAudioHTML(prefix + filenames[i] + '_instructme2_melody.wav', false);
       cell.style.textAlign = "center";
 
-      cell = row.insertCell(9);
+      cell = row.insertCell(7);
       cell.innerHTML = createAudioHTML(prefix + filenames[i] + '_instructme3_acc.wav', false);
       cell.style.textAlign = "center";
 
-      cell = row.insertCell(10);
+      cell = row.insertCell(8);
       cell.innerHTML = createAudioHTML(prefix + filenames[i] + '_instructme3_melody.wav', false);
+      cell.style.textAlign = "center";
+
+      cell = row.insertCell(9);
+      cell.innerHTML = createAudioHTML(prefix + filenames[i] + '_target_acc.wav', false);
+      cell.style.textAlign = "center";
+
+      cell = row.insertCell(10);
+      cell.innerHTML = createAudioHTML(prefix + filenames[i] + '_target_melody.wav', false);
       cell.style.textAlign = "center";
 
     } else {
@@ -601,7 +601,7 @@ instr = ['remix_with_guitar_drums_piano_synth_lead_20', 'remix_with_drums_guitar
 //['remix_this_music_11', 'remix_this_music_20', 'remix_this_music_17', 'remix_this_music_2', 'remix_this_music_13', 'remix_this_music_12', 'remix_with_bass_drum_strings_1', 'remix_this_music_10', 'remix_this_music_3', 'remix_this_music_18']
 // ['remix_with_guitar_drums_piano_synth_lead_20', 'remix_with_drums_piano_guitar_bass_3', 'remix_with_drums_piano_12', 'remix_with_bass_piano_strings_1', 'remix_with_bass_guitar_drums_2', 'remix_with_guitar_piano_strings_drums_bass_10', 'remix_with_piano_drums_strings_bass_guitar_11', 'remix_with_guitar_strings_synth_pad_bass_piano_13', 'remix_with_guitar_drums_bass_piano_strings_17', 'remix_with_bass_synth_lead_strings_piano_drums_18']
 
-genre = ['remix_to_pop_genre_10', 'remix_to_blues_genre_5', 'remix_to_r_and_b_genre_14', 'remix_to_funk_genre_3', 'remix_to_soul_genre_6', 'remix_to_alternative_genre_2', 'remix_to_r_and_b_genre_12', 'remix_to_rock_genre_9', 'remix_to_disco_genre_15', 'remix_to_pop_genre_13']
+genre = ['remix_to_pop_genre_10', 'remix_to_blues_genre_5', 'remix_to_r_and_b_genre_14', 'remix_to_funk_genre_3', 'remix_to_alternative_genre_2', 'remix_to_r_and_b_genre_12', 'remix_to_rock_genre_9', 'remix_to_pop_genre_13']
 
 soft = ['remix_with_piano_drums_guitar_bass_14', 'remix_with_bass_piano_guitar_drums_9', 'remix_with_piano_drums_bass_guitar_23']
 // ['remix_this_music_9', 'remix_this_music_23', 'remix_this_music_14']
@@ -716,7 +716,7 @@ $(document).ready(function() {
 });
 
 $(document).ready(function() {
-  for (let i = 1; i <= 3; i++) {
+  for (let i = 1; i <= 2; i++) {
     let id = '#genre-operation-' + i;
     $(id).click(function() {
       generateRemixTable(
